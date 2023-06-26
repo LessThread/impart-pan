@@ -1,30 +1,53 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="main-background">
+  </div>
+    <div id="main-body">
+      <mainHeader/>
+      <mainContant/>
+    </div>
+  
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+#main-background{
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1d3043;
+  top:0;
+  left: 0;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#main-body{
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1820px;
+  background-color: #18222c;
+  min-height: 1000px;
+  color: #E5EAF3;
 }
 </style>
+
+<script>
+import mainHeader from "@/components/header.vue"
+import mainContant from "@/components/contant.vue"
+import {defineComponent,computed,ref,watch,onMounted,reactive,toRefs,toRef} from 'vue'
+import router from '@/router';
+import { useRouter } from 'vue-router';
+
+export default defineComponent({
+    components: {
+      mainHeader,
+      mainContant
+  },
+    setup(){
+
+        return{
+        }
+    
+    }
+
+})
+</script>
