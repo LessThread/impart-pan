@@ -16,6 +16,8 @@
     background-color: #213d5b;
     color: #E5EAF3;
     display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .header-title{

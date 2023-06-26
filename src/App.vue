@@ -1,7 +1,7 @@
 <template>
   <div id="main-background">
   </div>
-    <div id="main-body">
+    <div id="main-body" >
       <mainHeader/>
       <mainContant/>
     </div>
@@ -21,12 +21,14 @@
 
 #main-body{
   position: relative;
-  margin: 0 auto;
+  margin:auto;
   width: 90%;
   max-width: 1820px;
   background-color: #18222c;
-  min-height: 1000px;
+  height: 90vh;
+  min-height: 900px;
   color: #E5EAF3;
+  border-radius: 10px;
 }
 </style>
 
