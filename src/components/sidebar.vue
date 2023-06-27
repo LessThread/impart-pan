@@ -12,31 +12,31 @@
             <el-sub-menu index="1">
               <template #title>
                 <el-icon><location /></el-icon>
-                <span>Navigator One</span>
+                <span>没什么用的侧栏</span>
               </template>
-              <el-menu-item-group title="Group One">
-                <el-menu-item index="1-1">item one</el-menu-item>
-                <el-menu-item index="1-2">item two</el-menu-item>
+              <el-menu-item-group title="没什么用的子栏">
+                <el-menu-item index="1-1">没什么用的子栏1</el-menu-item>
+                <el-menu-item index="1-2">没什么用的子栏2</el-menu-item>
               </el-menu-item-group>
-              <el-menu-item-group title="Group Two">
-                <el-menu-item index="1-3">item three</el-menu-item>
+              <el-menu-item-group title="也没什么用的子栏">
+                <el-menu-item index="1-3">没什么用的子栏3</el-menu-item>
               </el-menu-item-group>
               <el-sub-menu index="1-4">
-                <template #title>item four</template>
-                <el-menu-item index="1-4-1">item one</el-menu-item>
+                <template #title>还是没什么用的子栏</template>
+                <el-menu-item index="1-4-1">没什么用的子栏4</el-menu-item>
               </el-sub-menu>
             </el-sub-menu>
             <el-menu-item index="2">
               <el-icon><icon-menu /></el-icon>
-              <span>Navigator Two</span>
+              <span>不知道要干嘛</span>
             </el-menu-item>
             <el-menu-item index="3" disabled>
               <el-icon><document /></el-icon>
-              <span>Navigator Three</span>
+              <span>放在这里就行</span>
             </el-menu-item>
             <el-menu-item index="4">
               <el-icon><setting /></el-icon>
-              <span>Navigator Four</span>
+              <span>占个位置先</span>
             </el-menu-item>
           </el-menu>
         </el-col>
