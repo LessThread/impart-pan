@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <img src="../assets/logo_transparent.svg" style="width: 10%;"/>
+        <img src="../assets/logo_transparent.svg" style="width: 10%;min-width:200px"/>
         <p class="header-title" style="margin: auto">
             TJU-ImpartPan
         </p>
