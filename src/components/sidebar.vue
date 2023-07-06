@@ -34,9 +34,9 @@
               <el-icon><document /></el-icon>
               <span>放在这里就行</span>
             </el-menu-item>
-            <el-menu-item index="4">
+            <el-menu-item index="4" >
               <el-icon><setting /></el-icon>
-              <span>占个位置先</span>
+              <upload/>
             </el-menu-item>
           </el-menu>
         </el-col>
@@ -55,18 +55,25 @@ import {defineComponent,computed,ref,watch,onMounted,reactive,toRefs,toRef} from
 import router from '@/router';
 import { useRouter } from 'vue-router';
 import {Document,Menu as IconMenu,Location,Setting,} from '@element-plus/icons-vue'
+import { ElMessageBox } from 'element-plus'
+import upload from '@/views/upload.vue'
 
 export default defineComponent({
     name:'mainSidebar',
+    components:{
+      upload
+    },
     setup(){
         
         const isCollapse = ref(true)
-const handleOpen = (key, keyPath) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key, keyPath) => {
-  console.log(key, keyPath)
-}
+        const handleOpen = (key, keyPath) => {
+          console.log(key, keyPath)
+        }
+        const handleClose = (key, keyPath) => {
+          console.log(key, keyPath)
+        }
+
+        
         return{
             handleOpen,
             handleClose,

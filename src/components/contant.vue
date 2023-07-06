@@ -3,8 +3,11 @@
         <div class="side">
             <mainSidebar/>
         </div>
-        <div class="display">
-            <displayCard/>
+        <div class="display" v-for="(item,index) in filelist" :key="index">
+            <displayCard :name='item' />
+        </div>
+        <div class="logo">
+            <img src="../assets/bq.webp" style="opacity:0.6;"/>
         </div>
     </div>
 
@@ -23,12 +26,21 @@
 }
 .display{
     position: relative;
-    width: 80%;
     height: 80%;
     min-height: 800px;
     background-color: #18222c;
     display: flex;
+    left: 10%;
+    max-width: 90%;
 
+}
+
+.logo{
+    pointer-events: none;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 </style>
 
@@ -45,7 +57,8 @@ import {defineComponent,computed,ref,watch,onMounted,reactive,toRefs,toRef} from
 import router from '@/router';
 import { useRouter } from 'vue-router';
 import mainSidebar  from "@/components/sidebar.vue"
-import displayCard from "@/components/card.vue"
+import displayCard from "@/components/card.vue";
+import {getFileList} from '@/api/api.ts';
 
 export default defineComponent({
     name:'mainContant',
@@ -54,9 +67,14 @@ export default defineComponent({
         displayCard,
     },
     setup(){
-        
+        const filelist = ref([]);
+        onMounted(()=>{
+            getFileList(filelist);
+        });
+
 
         return{
+            filelist,
         }
     
     }
