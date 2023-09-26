@@ -3,22 +3,27 @@
       上传文件
     </span>
   
-    <el-dialog
+    <!-- <el-dialog
       v-model="dialogVisible"
       title="文件上传"
       width="60%"
       :before-close="handleClose"
+    > -->
+    <el-dialog
+      v-model="dialogVisible"
+      title="文件上传"
+      width="60%"
     >
       <span>自动上传</span>
       <uploaddiv/>
-      <template #footer>
+      <!-- <template #footer>
         <span class="dialog-footer">
-          <el-button @click="dialogVisible = false">Cancel</el-button>
+          <el-button @click="dialogVisible = false">取消</el-button>
           <el-button type="primary" @click="dialogVisible = false">
-            Confirm
+            确认
           </el-button>
         </span>
-      </template>
+      </template> -->
     </el-dialog>
   </template>
   

@@ -2,8 +2,9 @@
     <el-upload
       class="upload-demo"
       drag
-      action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+      action="http://140.210.195.77:8000/upload"
       multiple
+      name="uploadFile"
     >
       <el-icon class="el-icon--upload"><upload-filled /></el-icon>
       <div class="el-upload__text">
@@ -11,19 +12,20 @@
       </div>
       <template #tip>
         <div class="el-upload__tip">
-          jpg/png files with a size less than 500kb
+          files with a size less than 1GB
         </div>
       </template>
     </el-upload>
 
-    <div>
+    <!-- <div>
         手动上传
     </div>
     <el-upload
     ref="uploadRef"
     class="upload-demo"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+    action="http://140.210.195.77:8000/upload"
     :auto-upload="false"
+    name="uploadFile"
   >
     <template #trigger>
       <el-button type="primary">选择文件</el-button>
@@ -31,14 +33,14 @@
 
     <el-button class="ml-3" type="success" @click="submitUpload">
       确认上传
-    </el-button>
+    </el-button> -->
 
-    <template #tip>
+    <!-- <template #tip>
       <div class="el-upload__tip">
         jpg/png files with a size less than 500kb
       </div>
     </template>
-  </el-upload>
+  </el-upload> -->
 </template>
   
 <script setup lang="ts">
